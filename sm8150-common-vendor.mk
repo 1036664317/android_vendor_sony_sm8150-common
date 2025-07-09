@@ -29,8 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sm8150-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/sony/sm8150-common/proprietary/system_ext/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephonyservice.xml \
     vendor/sony/sm8150-common/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
-    vendor/sony/sm8150-common/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
-    vendor/sony/sm8150-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
+    vendor/sony/sm8150-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/sony/sm8150-common/proprietary/vendor/camera/CHI08BS1/bokeh_comp.dat:$(TARGET_COPY_OUT_VENDOR)/camera/CHI08BS1/bokeh_comp.dat \
     vendor/sony/sm8150-common/proprietary/vendor/camera/CHI08BS1/color_ctrl.dat:$(TARGET_COPY_OUT_VENDOR)/camera/CHI08BS1/color_ctrl.dat \
     vendor/sony/sm8150-common/proprietary/vendor/camera/CHI08BS1/dataflow.dat:$(TARGET_COPY_OUT_VENDOR)/camera/CHI08BS1/dataflow.dat \
@@ -1420,13 +1419,17 @@ PRODUCT_PACKAGES += \
     libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
+    libwfdavenhancements \
     libwfdclient \
     libwfdcommonutils \
     libwfdconfigutils \
     libwfddisplayconfig \
     libwfdmminterface \
     libwfdmmsink \
+    libwfdmmsrc_system \
+    libwfdnative \
     libwfdrtsp \
+    libwfdservice \
     libwfdsinksm \
     libwfduibcinterface \
     libwfduibcsink \
@@ -1474,6 +1477,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@1.0 \
     vendor.qti.ims.rcsconfig@1.1 \
     vendor.qti.imsrtpservice@3.0 \
+    vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     CACertService \
     CneApp \
     IWlanService \
