@@ -1607,6 +1607,7 @@ PRODUCT_PACKAGES += \
     tloc_daemon \
     vendor.qti.hardware.soter@1.0-provision \
     vppservice \
+    wfdvndservice \
     wifidisplayhalservice \
     wvkbd \
     xtra-daemon \
