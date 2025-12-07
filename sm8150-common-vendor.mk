@@ -506,8 +506,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
-    vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service.rc \
-    vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
     vendor/sony/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
@@ -536,7 +534,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sm8150-common/proprietary/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
     vendor/sony/sm8150-common/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/sony/sm8150-common/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
-    vendor/sony/sm8150-common/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/sony/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_Dual_Sharp_WQHD_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Dual_Sharp_WQHD_cmd_mode_dsi_panel.xml \
     vendor/sony/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_Dual_Sharp_wqhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Dual_Sharp_wqhd_video_mode_dsi_panel.xml \
     vendor/sony/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_Dual_nt35597_cmd_mode_dsi_truly_panel_without_DSC.xml.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_Dual_nt35597_cmd_mode_dsi_truly_panel_without_DSC.xml.xml \
@@ -957,9 +954,6 @@ PRODUCT_PACKAGES += \
     libnpu \
     liboemcrypto \
     libops \
-    libperfconfig \
-    libperfgluelayer \
-    libperfioctl \
     libperipheral_client \
     libpfter \
     libprotobuf-c-idd \
@@ -980,9 +974,6 @@ PRODUCT_PACKAGES += \
     libqmi_legacy \
     libqmiservices \
     libqrtr \
-    libqti-perfd-client \
-    libqti-perfd \
-    libqti-util \
     libqtigef \
     libqtikeymaster4 \
     librebuffering \
@@ -1067,7 +1058,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@2.0 \
     vendor.qti.ims.rcsconfig@2.1 \
     vendor.qti.latency@2.0 \
-    vendor.qti.memory.pasrmanager@1.0 \
     vendor.semc.hardware.extlight-V1-ndk_platform \
     vendor.semc.system.idd@1.0 \
     vendor.somc.hardware.miscta@1.0_vendor \
@@ -1239,8 +1229,6 @@ PRODUCT_PACKAGES += \
     libGPQTEEC_vendor \
     libGPTEE_vendor \
     libRbsFlow \
-    libadaptlaunch \
-    libappclassifier \
     libasn1cper \
     libasn1crt \
     libasn1crtx \
@@ -1256,7 +1244,6 @@ PRODUCT_PACKAGES += \
     libdisplayqos \
     libembmsservice \
     libets_teeclient_v2 \
-    libgameoptfeature \
     libgarden \
     libgarden_haltests_e2e \
     libgdtap \
@@ -1270,7 +1257,6 @@ PRODUCT_PACKAGES += \
     libizat_core \
     libjnihelper \
     liblbs_core \
-    liblearningmodule \
     libloadalgo_stub \
     libloc_api_v02 \
     libloc_socket \
@@ -1279,8 +1265,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
-    libmeters-ns \
-    libmeters \
     libminkdescriptor \
     libminksocket \
     libnetmgr_common \
@@ -1296,8 +1280,6 @@ PRODUCT_PACKAGES += \
     libqdma_file_agent \
     libqseed3 \
     libqsocket \
-    libqti-iopd-client \
-    libqti-iopd \
     librcc \
     libril-qc-hal-qmi \
     libril-qc-logger \
@@ -1346,8 +1328,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.embmssl@1.0-adapter-helper \
     vendor.qti.hardware.embmssl@1.0 \
-    vendor.qti.hardware.iop@1.0 \
-    vendor.qti.hardware.iop@2.0 \
     vendor.qti.hardware.qseecom@1.0_vendor \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
@@ -1434,7 +1414,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
-    com.qualcomm.qti.wifidisplayhal@1.0 \
     libwfdavenhancements \
     libwfdmmsrc_system \
     libwfdservice \
@@ -1537,8 +1516,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
-    vendor.qti.hardware.iop@2.0-service \
-    vendor.qti.hardware.perf@2.2-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.qteeconnector@1.0-service \
     vendor.qti.hardware.sensorscalibrate@1.0-service \

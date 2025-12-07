@@ -12239,7 +12239,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsmwrapper.so",
             ],
@@ -12265,7 +12265,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsnpe_dsp_domains_v2.so",
             ],
@@ -12291,7 +12291,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_alfortlpserv.so",
             ],
@@ -12318,7 +12318,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_angelpie.so",
             ],
@@ -12356,7 +12356,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_bordeaux.so",
             ],
@@ -12591,7 +12591,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_financier.so",
             ],
@@ -12610,7 +12610,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_financierrsc.so",
             ],
@@ -12629,7 +12629,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_madeleine_core.so",
             ],
@@ -12705,7 +12705,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_melonpanrsc.so",
             ],
@@ -12724,7 +12724,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_mln.so",
             ],
@@ -12743,7 +12743,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_mugichoco.so",
             ],
@@ -12762,7 +12762,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_mugichocorsc.so",
             ],
@@ -12781,7 +12781,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm64: {
+        android_arm: {
             srcs: [
                 "proprietary/vendor/lib/libsomc_parisbrest.so",
             ],
@@ -13411,6 +13411,38 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "libwfdhdcpservice_proprietary",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdhdcpservice_proprietary.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libwfdhdcpcp",
+                "libc++",
+                "libclang_rt.ubsan_standalone",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
 
 cc_prebuilt_library_shared {
     name: "libwfdmminterface_proprietary",
@@ -15295,64 +15327,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadaptlaunch",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadaptlaunch.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libmeters-ns",
-                "libsqlite",
-                "libqti-perfd-client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libappclassifier",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libappclassifier.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libsqlite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libasn1cper",
     owner: "sony",
     strip: {
@@ -15750,41 +15724,6 @@ cc_prebuilt_library_shared {
                 "libQSEEComAPI",
                 "libion",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgameoptfeature",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgameoptfeature.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libmeters-ns",
-                "libsqlite",
-                "libqti-perfd-client",
-                "vendor.display.config@1.0",
-                "libhwbinder",
-                "libhidlbase",
-                "libutils",
-                "libthermalclient",
                 "libc++",
                 "libc",
                 "libm",
@@ -16431,34 +16370,6 @@ cc_prebuilt_library_shared {
                 "libqmi_common_so",
                 "libqmi_client_helper",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmeters-ns",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmeters-ns.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libqti-perfd-client",
                 "libc++",
                 "libc",
                 "libm",
