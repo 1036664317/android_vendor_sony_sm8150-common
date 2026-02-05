@@ -23124,6 +23124,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.semc.hardware.secd@1.0-service",
             ],
             shared_libs: [
+                "lib-secdshim",
                 "liblog",
                 "libutils",
                 "libhidlbase",
