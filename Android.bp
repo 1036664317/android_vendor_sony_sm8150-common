@@ -20571,6 +20571,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libaudiobase",
+		"libgui_shim",
                 "libbinder",
                 "libmmosal",
                 "liblog",
